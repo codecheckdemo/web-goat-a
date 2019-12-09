@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TaintAnalysis version="1.0">
+<WS_SuppressFrameworkSimulationCodeGeneration value="false"/>
+<WS_TomcatVersionForJspProcessing value="V8_0"/>
+<FR_TimeoutForMvcViewNameSearch value="60"/>
+<FR_TimeoutForMvcModelValueAssignmentSearch value="60"/>
+<FR_HonorQuotingFunctionsInFreemarkerCode value="true"/>
+<FR_FilterJsfSourcesAndSinksByElInTemplates value="true"/>
+<CG_ExtendCallgraphHeuristically value="IF_EMPTY"/>
+<CG_UseOnlyConstructedClassesForHeuristicCallgraphExtension value="false"/>
+<RAPS_NumberOfThreads value="1"/>
+<RA_NumberOfSourcesOfAProblemToProcessAtOnce value="100"/>
+<RA_TimeoutForDataflowReachabilityComputation value="3600"/>
+<RA_DoPhiProcessingWhileComputingRetroactiveTaintImplications value="false"/>
+<RA_AnalyseCaughtExceptions value="true"/>
+<RA_CollectHarmlessSinks value="false"/>
+<RA_GloballyIgnoreAllNonConstantMapLikeAccessorKeys value="TRUE"/>
+<RA_TaintOnHeapCanVanish value="false"/>
+<RA_MaxHeapIndirectionsForSinkMatching value="2"/>
+<RA_ApplySpecialGetterSetterSemantics value="true"/>
+<RA_CallGraphSearchLimitIfEndsOfDataflowsAreSinks value="3"/>
+<RA_GeneralCallGraphSearchLimit value="10"/>
+<RAGenerateWarningsForSinksOutsideOfTrustZones value="true"/>
+<PS_PathsPerEndpoint value="1"/>
+<PS_LookForSeveralPathsInsideMethods value="false"/>
+<PS_MaximalMethodPathSegmentCountInPath value="50"/>
+<PS_TimeoutForCallerSearch value="120"/>
+<PS_TimeoutForPathFinding value="120"/>
+<PS_MaxTaintDataSinkCombinationsToUsePerJob value="10000"/>
+<RP_FindingDetailsReportTemplate value="&lt;INSTALL_DIR&gt;\reporting\reportdesign\xanitizer_finding_details.rptdesign"/>
+<RP_FindingListReportTemplate value="&lt;INSTALL_DIR&gt;\reporting\reportdesign\xanitizer_findings_list.rptdesign"/>
+<RP_OverviewReportTemplate value="&lt;INSTALL_DIR&gt;\reporting\reportdesign\xanitizer_overview.rptdesign"/>
+<PD_LocalProblemDefinitions version="1.0">
+<StartMethods kind="StartMethod:MyStartMethods" presentationName="My Start Methods">
+<Description><![CDATA[You can add your project-specific start methods here. Do not forget to edit or delete the sample entry.]]></Description><Method alsoInSubclasses="true" restrictToWorkspace="false">void sample.package.path.ExampleClass.dummyMethod()</Method></StartMethods>
+</PD_LocalProblemDefinitions>
+<!--PD_ProblemType name="Findbugs"/-->
+<PD_ProblemType name="JNICall:All"/>
+<PD_ProblemType name="LiteralStringsInVariablesSearch:password"/>
+<PD_ProblemType name="LiteralStringsInVariablesSearch:username"/>
+<!--PD_ProblemType name="OWASPDependencyCheck"/-->
+<PD_ProblemType name="RegexSearch:PasswordInConfigFile"/>
+<!--PD_ProblemType name="SpecialMethodCall:AppliedReflection"/-->
+<PD_ProblemType name="SpecialMethodCall:EncryptionUsedInProject"/>
+<PD_ProblemType name="SpecialMethodCall:EncryptionUsedInProjectWOProvider"/>
+<PD_ProblemType name="SpecialMethodCall:JavaServletFindAndInclude"/>
+<PD_ProblemType name="SpecialMethodCall:WeakEncryption"/>
+<PD_ProblemType name="SpecialMethodCall:WeakHash"/>
+<PD_ProblemType name="SpecialMethodCall:java.util.Random"/>
+<!--PD_ProblemType name="USER:GeneralCodeIssue"/-->
+<!--PD_ProblemType name="XPathSearch:exceptionTypeJavaLangThrowableMissing"/-->
+<!--PD_ProblemType name="XPathSearch:sessionConfigMissing"/-->
+<!--PD_ProblemType name="XPathSearch:sessionConfigWOHttpOnlyAndSecureInCookieConfig"/-->
+<!--PD_ProblemType name="XPathSearch:sessionConfigWOTrackingModeCookieConfig"/-->
+<!--PD_ProblemType name="XPathSearch:sessionTimeout"/-->
+<!--PD_ProblemType name="XPathSearch:sessionTimeoutNotConfigured"/-->
+<!--PD_ProblemType name="XPathSearch:useHttpOnly"/-->
+<PD_ProblemType name="ci:CommandInjection"/>
+<PD_ProblemType name="ci:LDAPInjection"/>
+<PD_ProblemType name="ci:LogInjection"/>
+<PD_ProblemType name="ci:SQLInjection"/>
+<PD_ProblemType name="ci:XPathInjection"/>
+<PD_ProblemType name="cook:HttpOnlyCookie"/>
+<PD_ProblemType name="cook:UnsecuredCookie"/>
+<PD_ProblemType name="hcc:HardCodedCredentials"/>
+<!--PD_ProblemType name="idor:InsecureDirectObjectReferences"/-->
+<PD_ProblemType name="pl:PrivacyLeak"/>
+<PD_ProblemType name="pt:PathTraversal"/>
+<PD_ProblemType name="rhi:ResponseHeaderInjection"/>
+<PD_ProblemType name="rl:IOStreamResourceLeak"/>
+<PD_ProblemType name="rl:SocketResourceLeak"/>
+<!--<PD_ProblemType name="ssl:SpecialMethodCall:SSL/TLSValidation"/-->
+<!--<PD_ProblemType name="ssl:SpecialMethodOverwriting:SSL/TLSValidation"/-->
+<PD_ProblemType name="tbv:TrustBoundaryViolationSession"/>
+<PD_ProblemType name="xss:URLRedirectAbuse"/>
+<PD_ProblemType name="xss:XSSFromDb"/>
+<PD_ProblemType name="xss:XSSFromDbUnrendered"/>
+<PD_ProblemType name="xss:XSSFromRequest"/>
+<PD_ProblemType name="xss:XSSFromRequestUnrendered"/>
+<PD_ProblemType name="xxe:DisallowDoc"/>
+<PD_ProblemType name="xxe:GeneralEntities"/>
+<PD_ProblemType name="xxe:ParamEntities"/>
+<WS_ClassesToBeExcludedEntirely positivePattern="com.sun.**"/>
+<WS_ClassesToBeExcludedEntirely positivePattern="java.applet.**"/>
+<WS_ClassesToBeExcludedEntirely positivePattern="java.awt.**"/>
+<WS_ClassesToBeExcludedEntirely positivePattern="javafx.**"/>
+<WS_ClassesToBeExcludedEntirely positivePattern="javax.swing.**"/>
+<WS_ClassesToBeExcludedEntirely positivePattern="org.omg.**"/>
+<WS_ClassesToBeExcludedEntirely positivePattern="sun.**"/>
+<WS_ClassesToBeExcludedEntirely negativePattern="com.sun.net.ssl.**"/>
+<WS_ClassesToBeExcludedEntirely negativePattern="java.awt.datatransfer.Transferable"/>
+<WS_ClassesToBeExcludedEntirely negativePattern="sun.misc.JavaSecurityAccess"/>
+<WS_ClassesToBeExcludedEntirely negativePattern="sun.misc.JavaSecurityProtectionDomainAccess"/>
+<WS_ClassesToBeExcludedEntirely negativePattern="sun.misc.JavaSecurityProtectionDomainAccess$ProtectionDomainCache"/>
+<WS_ClassesToBeExcludedEntirely negativePattern="sun.security.provider.certpath.CertPathHelper"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/ecs-1.4.2.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/commons-beanutils-1.6.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/axis-saaj-1.2.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/jta-1.0.1B.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/commons-io-1.4.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/log4j-1.2.8.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/mail-1.4.2.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/axis-1.2.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/commons-digester-1.4.1.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/hsqldb-1.8.0.7.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/mailapi-1.4.2.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/jtds-1.2.2.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/wsdl4j-1.5.1.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/axis-jaxrpc-1.2.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/commons-discovery-0.2.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/j2h-1.3.1.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/commons-collections-3.1.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/axis-ant-1.2.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/activation-1.1.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/commons-fileupload-1.2.1.jar"/>
+<WS_SearchPathElement kind="JAVA_JAR" path="I:/webgoat/WEB-INF/lib/commons-logging-1.0.4.jar"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/CrossSiteScripting"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/instructor/CrossSiteScripting"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/instructor/RoleBasedAccessControl"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/instructor/SQLInjection"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/RoleBasedAccessControl"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/instructor/DBCrossSiteScripting"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/servlets"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/GoatHillsFinancial"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/ClientSideFiltering"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/session"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/SQLInjection"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/util"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/admin"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/DBSQLInjection"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat"/>
+<WS_SearchPathElement kind="JAVA_CLASS_DIR" path="I:/webgoat/WEB-INF/classes/org/owasp/webgoat/lessons/DBCrossSiteScripting"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/Ajax"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/ConfManagement"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/SQLInjection"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/DBCrossSiteScripting"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/RoleBasedAccessControl"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/GoatHillsFinancial"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/General"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/Ajax/instructor"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/DBSQLInjection"/>
+<WS_SearchPathElement kind="JSP_DIR" path="I:/webgoat/lessons/CrossSiteScripting"/>
+<WS_SearchPathElement kind="XML_DIR" path="I:/webgoat/WEB-INF"/>
+<WS_SearchPathElement kind="XML_DIR" path="I:/webgoat/lessons/XPATHInjection"/>
+<WS_SearchPathElement kind="XML_DIR" path="I:/webgoat"/>
+<WS_SearchPathElement kind="XML_DIR" path="I:/webgoat/lessons/Ajax"/>
+<WS_SearchPathElement kind="WEB_INF_DIR" path="I:/webgoat/WEB-INF"/>
+<WS_SearchPathElement kind="JAVA_SRC_DIR" path="I:\webgoat"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.GoatHillsFinancial.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.RoleBasedAccessControl.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.instructor.DBCrossSiteScripting.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.SQLInjection.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.instructor.RoleBasedAccessControl.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.instructor.SQLInjection.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.ClientSideFiltering.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.servlets.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.session.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.DBSQLInjection.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.DBCrossSiteScripting.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.admin.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.instructor.CrossSiteScripting.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.CrossSiteScripting.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.util.*"/>
+<WS_WorkspaceClasses positivePattern="org.owasp.webgoat.lessons.*"/>
+<WS_Resources positivePattern="**"/>
+<WS_Resources negativePattern="**/*.class"/>
+<WS_Resources negativePattern="**/*.gif"/>
+<WS_Resources negativePattern="**/*.java"/>
+<WS_Resources negativePattern="**/*.jpg"/>
+<WS_Resources negativePattern="**/*.png"/>
+<WS_SuppressedSystemLibrary>lib/jfxrt.jar</WS_SuppressedSystemLibrary>
+<WS_SuppressedSystemLibrary>lib/jfr.jar</WS_SuppressedSystemLibrary>
+<FR_FrameworksToBeAnalyzed positivePattern="**"/>
+<FR_FrameworksToBeAnalyzed negativePattern="BasicGenericFrameworkSupport"/>
+<FR_FrameworksToBeAnalyzed negativePattern="Hibernate"/>
+</TaintAnalysis>
